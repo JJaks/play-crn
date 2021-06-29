@@ -56,7 +56,7 @@ export default class Home extends React.Component<{}, AppState> {
           </h1>
 
           <p className={styles.description}>
-            This is a simple &quot;game&quot; made using Next.JS, Typescript, CSS and other magical tricks. <br></br>
+            This is a simple &quot;simulation&quot; made using Next.JS, Typescript, CSS and other magical tricks like tsParticles. <br></br>
             Get started by inserting a number of objects (let&apos;s call them people).
           </p>
 
