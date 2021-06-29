@@ -13,7 +13,7 @@ export interface GameProps {
 export interface AppState {
     goBack: boolean;
 }
-export class Game extends React.Component<GameProps, AppState> {
+export default class Game extends React.Component<GameProps, AppState> {
     constructor(props: GameProps) {
         super(props);
 
