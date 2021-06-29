@@ -46,7 +46,6 @@ export class Game extends React.Component<GameProps, AppState> {
                     <title>Simulation</title>
                     <meta name="description" content="Next App - Game" />
                     <link rel="icon" href="/favicon.ico" />
-                    <a className="start" onClick={this.goBack} href="/" data-title="Go back"></a>
                 </Head>
                 <header className={styles.header}>
                     <button className="start" onClick={this.goBack} data-title="Go back"></button>
