@@ -52,12 +52,12 @@ export default class Home extends React.Component<{}, AppState> {
 
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Let's play a simulation.
+            Let&apos;s play a simulation.
           </h1>
 
           <p className={styles.description}>
-            This is a simple "game" made using Next.JS, Typescript, CSS and other magical tricks. <br></br>
-            Get started by inserting a number of objects (let's call them people).
+            This is a simple &quot;game&quot; made using Next.JS, Typescript, CSS and other magical tricks. <br></br>
+            Get started by inserting a number of objects (let&apos;s call them people).
           </p>
 
           <input id="number" type="number" min="0" placeholder="Enter the amount" value={this.state.particleAmount} onChange={this.handleChange}></input>
