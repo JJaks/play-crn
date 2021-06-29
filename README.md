@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) game written in Typescript and deployed on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+This is a [Next.js](https://nextjs.org/) simulation written in Typescript and deployed on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
 ## Information about the app
 
