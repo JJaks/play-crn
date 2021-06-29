@@ -5,16 +5,19 @@ This is a [Next.js](https://nextjs.org/) game written in Typescript and deployed
 I call it a simulation/game but more or less it's something in between a simulation and a random object generator with just some bells and whistles.
 
 **Original task**
+
 Originally the task had an app that would be inspired by the COVID-19 (SARS-CoV-2) pandemic and was as follows:
 1. A simple page that asks the user for an input
 2. Input is passed on to the app and the app will generate that amount of objects (boxes, circles - referred to as people)
 3. Objects would randomly avoid each other and the cursor
 
 **Added features**
+
 1. Infection (Objects would get infected if they bump into each other)
 2. Cure (infected objects would be cured after some time as the virus goes through it's lifecycle)
 
 **How it works?**
+
 Well good you asked, it basically works like this: User enters a random number of objects(people) they want.
 Then the system renders the amount of random objects that will start moving around randomly, one of those objects is infected (it will change color).
 When the infected object comes closer to another object it has a chance to infect them and so on the infection spreads.
