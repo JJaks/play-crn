@@ -4,8 +4,6 @@ import React from "react";
 import Particles from "react-tsparticles";
 import particlesOptions from "../particles.json";
 import { ISourceOptions } from "tsparticles";
-import Router from 'next/dist/next-server/server/router';
-import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 
 export interface GameProps {
@@ -32,8 +30,7 @@ export class Game extends React.Component<GameProps, AppState> {
     }
 
     goBack() {
-        const router = useRouter();
-        router.reload();
+        window.location.reload();
     }
     render() {
         let options: ISourceOptions = particlesOptions as ISourceOptions;
