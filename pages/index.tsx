@@ -62,7 +62,7 @@ export default class Home extends React.Component<{}, AppState> {
 
           <input id="number" type="number" min="0" placeholder="Enter the amount" value={this.state.particleAmount} onChange={this.handleChange}></input>
 
-          <a className="start" onClick={this.startGame} data-title="Start the game"></a>
+          <button className="start" onClick={this.startGame} data-title="Start the game"></button>
         </main>
 
         <footer className={styles.footer}>

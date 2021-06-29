@@ -49,7 +49,7 @@ export class Game extends React.Component<GameProps, AppState> {
                     <a className="start" onClick={this.goBack} href="/" data-title="Go back"></a>
                 </Head>
                 <header className={styles.header}>
-                    <a className="start" onClick={this.goBack} href="/" data-title="Go back"></a>
+                    <button className="start" onClick={this.goBack} data-title="Go back"></button>
                 </header>
                 <main className={styles.main}>
                     <Particles
