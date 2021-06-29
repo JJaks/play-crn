@@ -45,7 +45,7 @@ export default class Home extends React.Component<{}, AppState> {
     return (
       <div className={styles.container}>
         <Head>
-          <title>Simulation - Start</title>
+          <title>Jaagop - Simulation - Start</title>
           <meta name="description" content="Next App - Simulation" />
           <link rel="icon" href="/favicon.ico" />
         </Head>

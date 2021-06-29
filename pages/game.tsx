@@ -43,7 +43,7 @@ export default class Game extends React.Component<GameProps, AppState> {
         return (
             <div className={styles.container}>
                 <Head >
-                    <title>Simulation</title>
+                    <title>Jaagop - Simulation</title>
                     <meta name="description" content="Next App - Game" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
