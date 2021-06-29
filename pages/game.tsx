@@ -8,8 +8,8 @@ import Head from 'next/head';
 
 export interface GameProps {
     particleAmount: number;
+    infectionsAmount: number;
 }
-
 export interface AppState {
     goBack: boolean;
 }
@@ -32,12 +32,15 @@ export default class Game extends React.Component<GameProps, AppState> {
     goBack() {
         window.location.reload();
     }
+
     render() {
         let options: ISourceOptions = particlesOptions as ISourceOptions;
         if (!options) {
             throw new Error("Unexpected state");
         }
 
+        // @ts-ignore 
+        options.infection.infections = this.props.infectionsAmount;
         // @ts-ignore 
         options.particles.number.value = this.props.particleAmount;
         return (

@@ -7,40 +7,52 @@ import Game from './game';
 export interface AppState {
   particleAmount: any;
   playGame: boolean;
+  infections: any;
 }
 export default class Home extends React.Component<{}, AppState> {
   constructor(props: {}) {
     super(props);
 
-    this.state = { particleAmount: "", playGame: false };
+    this.state = { particleAmount: "", playGame: false, infections: "" };
     this.handleChange = this.handleChange.bind(this);
     this.startGame = this.startGame.bind(this);
   }
 
   handleChange(event: any) {
-    this.setState({ particleAmount: event.target.value });
+    if (event.target.id == "particleAmount") {
+      this.setState({ particleAmount: event.target.value });
+    } else {
+      this.setState({ infections: event.target.value });
+    }
+
   }
+
   startGame() {
     let valueRegex = /^[1-9]\d*$/;
     let value = this.state.particleAmount;
+    let infection = this.state.infections;
     let isValidValue = valueRegex.test(value);
     let isBigNumber = parseInt(value) > 90 ? true : false;
+    let isBiggerThanInf = parseInt(value) > parseInt(infection) ? true : false;
 
-    if (isValidValue && !isBigNumber) {
+    if (isValidValue && !isBigNumber && isBiggerThanInf) {
       this.setState({ playGame: true });
     } else {
       console.warn("Value inserted is not valid or is too big, isValidValue: [", isValidValue, value, " ] isBigNumber: [", isBigNumber, value, "]");
-      if (isBigNumber)
+      if (isBigNumber) {
         alert("Please don't try to kill your browser or the simulation...try a lower number");
-      else
+      } else if (!isBiggerThanInf) {
+        alert("Sorry...that doesn't compute. There has to be more objects than infected");
+      } else {
         alert("Please insert a valid number of objects. Current value(" + value + ") is not valid");
+      }
     }
   }
+
   render() {
     if (this.state.playGame) {
-      return (<Game particleAmount={parseInt(this.state.particleAmount)}></Game>);
+      return (<Game particleAmount={parseInt(this.state.particleAmount)} infectionsAmount={parseInt(this.state.infections)}></Game>);
     }
-
 
     return (
       <div className={styles.container}>
@@ -60,7 +72,11 @@ export default class Home extends React.Component<{}, AppState> {
             Get started by inserting a number of objects (let&apos;s call them people).
           </p>
 
-          <input id="number" type="number" min="0" placeholder="Enter the amount" value={this.state.particleAmount} onChange={this.handleChange}></input>
+          <input id="particleAmount" type="number" min="0" placeholder="Enter object amount" value={this.state.particleAmount} onChange={this.handleChange}></input>
+          <p className={styles.infected}>
+            Pssst...infected amount defines the number of infected that there are out of objects.
+          </p>
+          <input id="infectionAmount" type="number" min="0" placeholder="Enter infected amount" value={this.state.infections} onChange={this.handleChange}></input>
 
           <button className="start" onClick={this.startGame} data-title="Start the game"></button>
         </main>

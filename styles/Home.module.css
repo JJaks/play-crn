@@ -55,6 +55,11 @@
   text-align: center;
 }
 
+.infected {
+  line-height: 1;
+  font-size: 1rem;
+}
+
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
