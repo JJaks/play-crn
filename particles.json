@@ -285,8 +285,8 @@
         "distance": 100,
         "enable": true,
         "rotate": {
-          "x": -20,
-          "y": -20
+          "x": -10,
+          "y": -10
         }
       },
       "decay": 0,

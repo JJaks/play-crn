@@ -15,6 +15,7 @@ Originally the task had an app that would be inspired by the COVID-19 (SARS-CoV-
 
 1. Infection (Objects would get infected if they bump into each other)
 2. Cure (infected objects would be cured after some time as the virus goes through it's lifecycle)
+3. Infection spreads with a delay (there's always an incubation period with a virus)
 
 **How it works?**
 
@@ -26,8 +27,7 @@ Infection has multiple states that are displayed by the color of the object (red
 Red state is where the object is most infectious (just like SARS-CoV-2) followed by a second stage where the object is less infectious but can still infect others.
 After some time, the infected objects in the second stage will be cured (the virus's lifecycle comes to an end).
 
-Objects will try to avoid other objects and the cursor but sometimes they may hit others, this is done on purpose to simulate real life (sadly all of us don't follow the rules of keeping distance :( ).
-
+Objects will try to avoid other objects and the cursor but sometimes they may hit others, this is done on purpose to simulate real life (sadly all of us don't follow the rules of keeping distance :( ). After a infected object has hit healthy object, it will take some time (about 2 seconds) for said object to get sick (this was made to simulate real life).
 
 ## About the development cycle
 

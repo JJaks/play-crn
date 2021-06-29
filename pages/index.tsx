@@ -24,14 +24,14 @@ export default class Home extends React.Component<{}, AppState> {
     let valueRegex = /^[1-9]\d*$/;
     let value = this.state.particleAmount;
     let isValidValue = valueRegex.test(value);
-    let isBigNumber = parseInt(value) > 200 ? true : false;
+    let isBigNumber = parseInt(value) > 90 ? true : false;
 
     if (isValidValue && !isBigNumber) {
       this.setState({ playGame: true });
     } else {
       console.warn("Value inserted is not valid or is too big, isValidValue: [", isValidValue, value, " ] isBigNumber: [", isBigNumber, value, "]");
       if (isBigNumber)
-        alert("Please don't try to kill your browser...try a lower number");
+        alert("Please don't try to kill your browser or the simulation...try a lower number");
       else
         alert("Please insert a valid number of objects. Current value(" + value + ") is not valid");
     }
