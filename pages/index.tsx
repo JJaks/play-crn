@@ -32,17 +32,21 @@ export default class Home extends React.Component<{}, AppState> {
     let value = this.state.particleAmount;
     let infection = this.state.infections;
     let isValidValue = valueRegex.test(value);
+    let isValidInf = valueRegex.test(infection);
     let isBigNumber = parseInt(value) > 90 ? true : false;
     let isBiggerThanInf = parseInt(value) > parseInt(infection) ? true : false;
 
-    if (isValidValue && !isBigNumber && isBiggerThanInf) {
+    if (isValidValue && !isBigNumber && isBiggerThanInf && isValidInf) {
       this.setState({ playGame: true });
     } else {
       console.warn("Value inserted is not valid or is too big, isValidValue: [", isValidValue, value, " ] isBigNumber: [", isBigNumber, value, "]");
+      console.warn("Infected value inserted is not valid or is too big, isValidValue: [", isValidInf, infection, " ] isBiggerThanInf: [", isBiggerThanInf, value, infection, "]");
       if (isBigNumber) {
         alert("Please don't try to kill your browser or the simulation...try a lower number");
       } else if (!isBiggerThanInf) {
         alert("Sorry...that doesn't compute. There has to be more objects than infected");
+      } else if (!isValidInf) {
+        alert("Sorry...please insert a valid value for infected. Current value(" + infection + ") is not valid");
       } else {
         alert("Please insert a valid number of objects. Current value(" + value + ") is not valid");
       }
