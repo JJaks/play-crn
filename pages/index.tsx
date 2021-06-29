@@ -57,7 +57,7 @@ export default class Home extends React.Component<{}, AppState> {
 
           <p className={styles.description}>
             This is a simple &quot;simulation&quot; made using Next.JS, Typescript, CSS and other magical tricks like tsParticles. <br></br>
-            Get started by inserting a number of objects (let&apos;s call them people). This was made to simulate real life (kinda) spreading of COVID-19
+            Get started by inserting a number of objects (let&apos;s call them people).
           </p>
 
           <input id="number" type="number" min="0" placeholder="Enter the amount" value={this.state.particleAmount} onChange={this.handleChange}></input>
