@@ -51,7 +51,7 @@
         "mode": "repulse",
         "parallax": {
           "enable": false,
-          "force": 2,
+          "force": 1,
           "smooth": 10
         }
       },
@@ -59,10 +59,10 @@
     },
     "modes": {
       "attract": {
-        "distance": 200,
+        "distance": 150,
         "duration": 0.4,
         "easing": "ease-out-quad",
-        "factor": 1,
+        "factor": 10,
         "maxSpeed": 50,
         "speed": 200
       },
@@ -313,10 +313,10 @@
       },
       "outModes": {
         "default": "out",
-        "bottom": "out",
+        "bottom": "bounce",
         "left": "out",
         "right": "out",
-        "top": "out"
+        "top": "bounce"
       },
       "random": true,
       "size": false,
