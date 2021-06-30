@@ -33,7 +33,7 @@ export default class Home extends React.Component<{}, AppState> {
     let infection = this.state.infections;
     let isValidValue = valueRegex.test(value);
     let isValidInf = valueRegex.test(infection);
-    let isBigNumber = parseInt(value) > 90 ? true : false;
+    let isBigNumber = parseInt(value) > 60 ? true : false;
     let isBiggerThanInf = parseInt(value) > parseInt(infection) ? true : false;
 
     if (isValidValue && !isBigNumber && isBiggerThanInf && isValidInf) {
